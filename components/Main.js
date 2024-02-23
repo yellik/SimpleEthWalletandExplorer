@@ -21,7 +21,6 @@ export async function checkAccount(){
     const account = document.querySelector('#account');
     const balance = document.querySelector('#balance');
     const balanceButton = document.querySelector('#checkBalance')
-    
     //div to display balance and history 
     const balanceAndHistory = document.createElement('div');
     const history = document.querySelector('#totaltrx');
@@ -34,7 +33,7 @@ export async function checkAccount(){
     balanceAndHistory.setAttribute('id', 'balance-history');
 
     //a div for checking wallet without metamask
-    otherWalletInfo.innerHTML = `No Metamask? Use the field below for Sepholia public key or Ganache`;
+    otherWalletInfo.innerHTML = `You need to be connected to Metamask to transfer funs. However, you can still use the block explorer below`;
     //append the info and the account input to the main-container
     container.appendChild(otherWalletInfo);
     container.appendChild(otherWallet);
@@ -59,7 +58,8 @@ export async function sendEth(){
     const amount = document.querySelector('#amount');
     const toAccount = document.querySelector('#toAccount');
     const sendTrxButton = document.querySelector('#sendTrx');
-    
+    const signWithMeta = document.querySelector('#signWithMeta')
+
 
     sendEthDiv.setAttribute('id', 'send-trx');
 
@@ -67,6 +67,6 @@ export async function sendEth(){
     sendEthDiv.appendChild(amount);
     sendEthDiv.appendChild(toAccount);
     sendEthDiv.appendChild(sendTrxButton);
-
+    sendEthDiv.appendChild(signWithMeta);
 }
 
