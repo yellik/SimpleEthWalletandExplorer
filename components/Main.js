@@ -21,7 +21,6 @@ export async function checkAccount(){
     const account = document.querySelector('#account');
     const balance = document.querySelector('#balance');
     const balanceButton = document.querySelector('#checkBalance')
-    
     //div to display balance and history 
     const balanceAndHistory = document.createElement('div');
     const history = document.querySelector('#totaltrx');
@@ -59,7 +58,8 @@ export async function sendEth(){
     const amount = document.querySelector('#amount');
     const toAccount = document.querySelector('#toAccount');
     const sendTrxButton = document.querySelector('#sendTrx');
-    
+    const signWithMeta = document.querySelector('#signWithMeta')
+
 
     sendEthDiv.setAttribute('id', 'send-trx');
 
@@ -67,6 +67,6 @@ export async function sendEth(){
     sendEthDiv.appendChild(amount);
     sendEthDiv.appendChild(toAccount);
     sendEthDiv.appendChild(sendTrxButton);
-
+    sendEthDiv.appendChild(signWithMeta);
 }
 

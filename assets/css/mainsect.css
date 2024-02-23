@@ -7,27 +7,26 @@
     display: flex;
     flex-direction: column;
     height: 40vh;
-    background-color: FFE4C9;
+    background-color: #FFE4C9;
     width: 100vw;
 }
 
 #info{
     display: flex;
     flex-direction: column;
-    width: 100vw;
     height: 10vh;
-    background-color: #BED1CF;
+    background-color: #FEFBF6;
     text-align: center;
     justify-content: center;
+    border-color: #B67352;
 }
 
 
 #other-wallet{
-    max-width:  1200px;
     display: flex;
     flex-direction: row;
     height: 10vh;
-    background-color: #ECB159;
+    background-color: #8CB9BD;
     justify-content: center;
     align-items: center;
 }
@@ -39,26 +38,27 @@
 
 #balance-history {
     border-radius: 5px;
-    height: 5vh;
+    height: 10vh;
 }
 
 #send-trx{
     background-color: #8CB9BD;
-    padding: 10%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
 }
 #amount{
-    width: 40vw;;
 
+    height: 30px;
     
 }
 #toAccount{
-   width: 30vw;
+    height: 30px;
+   margin-bottom: 30px;
 
 }
 #sendTrx{
-    width: 30vw;
+   
 }
