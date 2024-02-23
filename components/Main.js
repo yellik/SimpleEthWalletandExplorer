@@ -33,7 +33,7 @@ export async function checkAccount(){
     balanceAndHistory.setAttribute('id', 'balance-history');
 
     //a div for checking wallet without metamask
-    otherWalletInfo.innerHTML = `No Metamask? Use the field below for Sepholia public key or Ganache`;
+    otherWalletInfo.innerHTML = `You need to be connected to Metamask to transfer funs. However, you can still use the block explorer below`;
     //append the info and the account input to the main-container
     container.appendChild(otherWalletInfo);
     container.appendChild(otherWallet);

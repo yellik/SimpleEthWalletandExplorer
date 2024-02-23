@@ -29,11 +29,13 @@
     background-color: #8CB9BD;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
  #account {
     border-radius: 5px;
-    height: 2vh;
+    height: 3vh;
+    width: 60vw;
 }
 
 #balance-history {
