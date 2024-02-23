@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script 
+    type="module" 
+    src="./app.js"
+    defer></script>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Ehtereum Balance Tracker</title>
+    
+</head>
+<body>
+    <div class="container"></div>
+        <button id="meta">Connect to Metamask</button>
+        <main id="main-container"></main>
+            <input 
+                type="text" 
+                id="account">
+            <button id="checkBalance">check wallet balance</button>
+            <div id="balance"></div>
+            <p></p>
+            <div id="totaltrx"></div>
+        <input
+            type="text" 
+            id="amount"
+            placeholder="enter the amount you want to send"/>
+        <p></p>
+        <input 
+            id="toAccount"
+            type="text"
+            style="width: 400px;"
+            placeholder="Receiving wallet address" />
+        <button id="sendTrx">Transfer Funds</button>
+        <button id="signWithMeta">Sign with Metamask</button>
+
+</body>
+</html>
