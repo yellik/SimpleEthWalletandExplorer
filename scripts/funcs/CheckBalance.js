@@ -15,29 +15,24 @@ export async function checkBalance() {
 
     try {
         const balance = await provider.getBalance(account);
-        displayBalance.innerHTML = ethers.utils.formatEther(balance);
+        const balanceInEth = ethers.utils.formatEther(balance);
+        displayBalance.innerHTML = `This account holds ${balanceInEth} ETH/Sepolia tokens`
 
+        
         const history = await scanProvider.getHistory(account);
-        totaltrx.innerHTML = `This account has made ${history.length} transactions on Sepolia network.`;
+       
 
-        console.log('Total Transactions on Sepolia:', history.length);
-
-        if (history.length > 0) {
-            console.log('Latest transaction from:', history[0].from);
-        } else {
-            console.log('This account has not made any previous transactions on Sepolia network.');
-        }
+        totaltrx.innerHTML = `This account has made ${history.length} transactions`;
+    
+        console.log(history);
+        console.log(history.length);
+        console.log(history[0].from);
     } catch (error) {
         console.error('Error checking balance:', error);
     }
 }
 
-export async function displayHistory(transactions) {
-    for (let trx of transactions) {
-        console.log(trx);
-        console.log('Block Number:', trx.blockNumber);
-    }
-}
+
 
 export async function sendTransaction() {
     try {
